@@ -1,0 +1,5 @@
+django == 3.0.6
+Pillow==7.1.2
+pycrypto==2.6.1
+
+

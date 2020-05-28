@@ -1,0 +1,38 @@
+{% extends 'blog/basic.html' %}
+{% block body %}
+<div class="container">
+    <div class="row mt-4">
+        <div class="col-md-8 blog-main" style="background-color: azure">
+            <h3 class="pb-4 mb-4 font-italic border-bottom">Blogposts....</h3>
+            <div class="blog-post">
+                <h2 class="blog-post-title">{{post.title}}</h2>
+                <p class="blog-post-meta">{{post.pub_date}} by<a href="https://poonam9009.github.io/myPortfolio/"> Poonam</a></p>
+                <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="" data-layout="standard" data-action="like" data-size="small" data-share="true" data-show-faces="true"></div>
+                <h1>{{post.head0}}</h1>
+                <p>{{post.chead0}}</p>
+                <h2>{{post.head1}}</h2>
+                <p>{{post.chead1}}</p>
+                <h2>{{post.head2}}</h2>
+                <p>{{post.chead2}}</p>
+                <div class="fb-comments" data-href="http://127.0.0.1:8000/blog/blogpost/{{post.post_id}}" data-numposts="2" data-width=""></div>
+            </div>
+        </div>
+
+        <aside class="col-md-4 blog-sidebar">
+            <div class="p-4 mb-3 bg-light rounded">
+                <h4 class="font-italic">About</h4>
+                <p class="mb-0">My Vanilla Cart <em>started out as a small project and is now</em> the fastest growing e-commerce stores of all times in india and abroad.</p>
+            </div>
+            <div class="p-4">
+                <h4 class="font-italic">Elsewhere</h4>
+                <ol class="list-unstyled">
+                    <li><a href="https://www.onlineworld-glan.com/">Wiki</a></li>
+                    <li><a href="https://twitter.com/onlineshopping?lang=en">Twitter</a></li>
+                    <li><a href="https://www.facebook.com/online.shopping/">Facebook</a></li>
+                </ol>
+                <img src="/media/{{post.thumbnail}}" class="bd-placeholder-img" width="450" height="350" aria-label="Placeholder: Thumbnail"/>
+            </div>
+        </aside>
+    </div>
+</div>
+{% endblock %}
